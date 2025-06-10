@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------- header start ---------------------------------------- */
+
+header {
+    position: fixed;
+    display: flex;
+    padding-left: 20vw;
+    background: linear-gradient(to right, #7aced8, #326bb5);
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ---------------------------- header end ----------------------------------------- */
+
+/* ---------------------------- main start ----------------------------------------- */
+
+main {
+    padding: 3rem 4rem;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+.bold_p {
+    font-weight: bold;
+}
+
+/*home start*/
+
+
+.home_section img {
+    height: 40vh;
+    float: right;
+    padding: 1rem;
+}
+
+.home_section p {
+    vertical-align: top; /* Aligns text to the top */
+    font-size: 16px; /* Reset font size after parent's font-size: 0 */
+}
+
+/*home end*/
+
+/*about_me start*/
+
+
+.about_me_section img {
+    height: 40vh;
+    float: left;
+    padding: 1rem;
+}
+
+.about_me_section p {
+    vertical-align: top; /* Aligns text to the top */
+    font-size: 16px; /* Reset font size after parent's font-size: 0 */
+}
+
+/*about_me end*/
+
+/*psychotherapie start*/
+
+.psychotherapie_section {
+    /* Ensure the container properly contains floats */
+    overflow: auto;
+}
+
+.psychotherapie_section img {
+    height: 40vh;
+    padding: 1rem;
+    float: left; /* Float image to left */
+    margin-right: 20px; /* Space between image and text */
+    margin-bottom: 10px; /* Space when text wraps below */
+}
+
+.psychotherapie_section p {
+    font-size: 16px;
+    /* Text will automatically flow around the image */
+}
+
+/*psychotherapie end*/
+
+
+/* ----------------------------- main end ------------------------------------------ */
+
+/* --------------------------- footer start ---------------------------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(to right, #7aced8, #326bb5);
+    padding: 0 4rem;
+}
+
+.sticky-menu ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+}
+
+.sticky-menu li {
+    display: inline-block;
+    padding: 0 2vw;
+}
+
+.sticky-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------------------------- footer end ----------------------------------------- */
+
+
+
