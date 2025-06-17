@@ -358,6 +358,63 @@ main {
 
 /*psychotherapie end*/
 
+/*training start*/
+
+/*training end*/
+
+/*faq start*/
+
+/*faq end*/
+
+/*kontakt start*/
+
+.kontakt_container {
+    display: flex;
+    padding-top: 3vh;
+}
+
+.kontakt_container p {
+    color: black;
+}
+
+.map_container {
+    width: 40vw;
+    height: 80vh;
+}
+
+.kontakt_text {
+    width: 60vw;
+    padding: 2rem 4rem;
+    background-color: #f8f8f8; /* Light gray background */
+}
+
+.kontakt_text h1 {
+    color: #153763;
+    margin-bottom: 2rem;
+}
+
+.kontakt_undertitle {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.kontakt_info {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.kontakt_descr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.kontakt_container li {
+    margin-left: 2vw;
+    color: black;
+}
+/*kontakt end*/
+
 
 /* ----------------------------- main end ------------------------------------------ */
 
