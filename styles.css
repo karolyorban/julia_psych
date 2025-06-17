@@ -1,24 +1,152 @@
+@font-face {
+    font-family: 'pt_sans';
+    src: url('mix/pt_sans.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #828486;
+    font-family: 'pt_sans';
 }
-
 /* --------------------------- header start ---------------------------------------- */
 
+/* Header Styles */
 header {
     position: fixed;
-    display: flex;
-    padding-left: 20vw;
-    background: linear-gradient(to right, #7aced8, #326bb5);
     width: 100%;
-    height: 2rem;
-    align-items: center;
-    gap: 10rem;
-    z-index: 1;
+    background: linear-gradient(to right, #7aced8, #326bb5);
+    z-index: 1000;
     opacity: 0.9;
+    padding: 0.5rem 2rem 0.5rem 18rem;
 }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contact-info {
+    display: flex;
+    gap: 1.5rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Dropdown Navigation */
+.dropdown-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(to right, #7aced8, #326bb5);
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.dropdown-nav.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-nav ul {
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.dropdown-nav li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-nav a:hover {
+    color: #e6f7ff;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+
+.hamburger-inner::before {
+    top: -8px;
+}
+
+.hamburger-inner::after {
+    top: 8px;
+}
+
+/* Active state for hamburger */
+.hamburger.active .hamburger-inner {
+    background-color: transparent;
+}
+
+.hamburger.active .hamburger-inner::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-inner::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 .telefon_number {
     color: white;
@@ -30,6 +158,22 @@ header a {
 }
 
 .ordination_address {
+    color: white;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: white;
+    width: 16px;
+    text-align: center;
+}
+
+/* Optional: Add hover effects */
+.contact-info a:hover i {
+    color: #e6f7ff;
+}
+
+.copyright_text {
     color: white;
 }
 
@@ -76,11 +220,13 @@ main {
 .home_title {
     font-size: 1rem;
     font-weight: bold;
+    color: #153763;
 }
 
 .home_name {
     font-weight: bold;
     font-size: 3rem;
+    color: #153763;
 }
 
 .home_section img {
@@ -91,13 +237,14 @@ main {
 }
 
 .home_section h1 {
-    color: #153763;
+    color: gray;
     font-size: 3rem;
     margin: 3rem auto 3rem auto;
 }
 
  .home_description {
     font-size: 1.4rem;
+    color: #153763;
 }
 
 .home_button {
@@ -105,7 +252,7 @@ main {
     margin-top: 5rem; /* Space from last paragraph */
     margin-left: 4rem;
     padding: 12px 25px;
-    background-color: #326bb5; /* Matching your gradient */
+    background-color: #153763; /* Matching your gradient */
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -114,18 +261,26 @@ main {
 }
 
 .home_button:hover {
-    background-color: #153763; /* Darker blue on hover */
+    background-color: #326bb5; /* Darker blue on hover */
 }
 
 /*home end*/
 
 /*about_me start*/
 
+.about_me_section {
+    padding-top: 5vh;
+}
+
 .about_me_section img {
-    height: 40vh;
+    height: 80vh;
     float: left;
     border-radius: 10px;
     margin: auto 2rem 1rem auto;
+}
+
+.beruf_ausbildung {
+    display: flex;
 }
 
 .about_me_section h1 {
@@ -142,6 +297,18 @@ main {
 .date {
     color: #326bb5;
     margin-top: 0.7rem;
+}
+
+.beruf {
+    margin-left: -17vw;
+}
+
+.ausbildung {
+    margin-left: -15vw;
+}
+
+.about_me_intro {
+    margin-left: -17vw;
 }
 
 /*about_me end*/
@@ -186,7 +353,7 @@ main {
 }
 
 .psychotherapie_section li {
-    margin-left: 21vw;
+    margin-left: 5vw;
 }
 
 /*psychotherapie end*/
@@ -229,6 +396,3 @@ footer {
 }
 
 /* ---------------------------- footer end ----------------------------------------- */
-
-
-

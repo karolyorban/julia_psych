@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // DOM Elements
     const navLinks = document.querySelectorAll('.nav-link');
-    const contentLinks = document.querySelectorAll('a[href^="#"]'); // Select all anchor links
+    const contentLinks = document.querySelectorAll('a[href^="#"]');
     const contentSections = document.querySelectorAll('.content-section');
     const header = document.querySelector('header');
     const homeSection = document.getElementById('home_section');
+    const hamburger = document.querySelector('.hamburger');
+    const dropdownNav = document.querySelector('.dropdown-nav');
 
     // State management
     let isPopState = false;
@@ -36,90 +38,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Determine the initial section to show
     function getInitialSection() {
-        // Check for hash in URL first
         if (window.location.hash) {
             const hashSection = window.location.hash.substring(1);
             if (document.getElementById(hashSection)) {
                 return hashSection;
             }
         }
-        
-        // Default to home section
         return config.defaultSection;
     }
 
     // Show a specific section
     function showSection(targetId, addToHistory = true) {
-        // Special handling for home section
         if (targetId === 'home_section') {
             showHomeSection(addToHistory);
             return;
         }
 
-        // Validate target exists
         const targetSection = document.getElementById(targetId);
         if (!targetSection) {
             console.warn(`Section with ID ${targetId} not found`);
             return;
         }
 
-        // Update current section
         currentSection = targetId;
 
-        // Hide all sections first
         contentSections.forEach(section => {
             section.classList.remove('active');
             section.style.display = 'none';
         });
 
-        // Show the target section
         targetSection.classList.add('active');
         targetSection.style.display = 'block';
-
-        // Scroll to section
         scrollToSection(targetSection);
 
-        // Update history if needed
         if (addToHistory && !isPopState) {
             updateHistory(targetId);
         }
+
+        // Close dropdown menu when a section is selected
+        closeDropdown();
     }
 
-    // Special handling for home section
     function showHomeSection(addToHistory) {
-    currentSection = 'home_section';
+        currentSection = 'home_section';
 
-    // Hide all sections first
-    contentSections.forEach(section => {
-        section.classList.remove('active');
-        section.style.display = 'none';
-    });
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+            section.style.display = 'none';
+        });
 
-    // Show only the home section
-    homeSection.classList.add('active');
-    homeSection.style.display = 'block'; // or 'block' depending on your layout
+        homeSection.classList.add('active');
+        homeSection.style.display = 'block';
+        window.scrollTo({
+            top: 0,
+            behavior: config.scrollBehavior
+        });
 
-    // Scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: config.scrollBehavior
-    });
+        if (addToHistory && !isPopState) {
+            updateHistory('home_section');
+        }
 
-    // Update history if needed
-    if (addToHistory && !isPopState) {
-        updateHistory('home_section');
+        // Close dropdown menu when home is selected
+        closeDropdown();
     }
-}
 
-    // Scroll to a section with optional offset
     function scrollToSection(section) {
-        // First scroll to top to ensure consistent behavior
         window.scrollTo({
             top: 0,
             behavior: 'auto'
         });
 
-        // Then scroll to the section
         setTimeout(() => {
             const targetPosition = section.offsetTop - config.scrollOffset;
             window.scrollTo({
@@ -129,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 10);
     }
 
-    // Update browser history
     function updateHistory(sectionId) {
         if (config.useHashInURL) {
             history.pushState({ section: sectionId }, '', `#${sectionId}`);
@@ -138,18 +125,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Handle link clicks
     function handleLinkClick(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         
-        // Only proceed if this is a valid section link
         if (targetId === 'home_section' || document.getElementById(targetId)) {
             showSection(targetId);
         }
     }
 
-    // Handle popstate (back/forward navigation)
     function handlePopState(e) {
         isPopState = true;
         const targetId = e.state?.section || config.defaultSection;
@@ -157,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isPopState = false;
     }
 
-    // Handle scroll events for header styling
     function handleScroll() {
         if (window.scrollY > 5) {
             header?.classList.add('scrolled');
@@ -166,7 +149,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Set up all event listeners
+    // Dropdown menu functions
+    function toggleDropdown() {
+        hamburger.classList.toggle('active');
+        dropdownNav.classList.toggle('active');
+    }
+
+    function closeDropdown() {
+        hamburger.classList.remove('active');
+        dropdownNav.classList.remove('active');
+    }
+
+    function handleDocumentClick(e) {
+        if (!dropdownNav.contains(e.target) && !hamburger.contains(e.target)) {
+            closeDropdown();
+        }
+    }
+
     function setupEventListeners() {
         // Navigation links
         navLinks.forEach(link => {
@@ -183,12 +182,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Browser navigation
         window.addEventListener('popstate', handlePopState);
+
+        // Hamburger menu
+        if (hamburger) {
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleDropdown();
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', handleDocumentClick);
+
+        // Prevent dropdown from closing when clicking inside
+        if (dropdownNav) {
+            dropdownNav.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
     }
 
-    // Set up scroll handler
     function setupScrollHandler() {
         window.addEventListener('scroll', handleScroll);
-        // Trigger once to set initial state
         handleScroll();
     }
 
