@@ -238,13 +238,14 @@ main {
 
 .home_section h1 {
     color: gray;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: 3rem auto 3rem auto;
 }
 
  .home_description {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #153763;
+    color: gray;
 }
 
 .home_button {
@@ -286,12 +287,13 @@ main {
 .about_me_section h1 {
     margin: 2rem auto 1rem 17vw;
     color: #153763;
+    font-size: 1.5rem;
 }
 
 .about_me_section p {
     vertical-align: top; /* Aligns text to the top */
     margin-left: 17vw;
-    font-size: 16px; /* Reset font size after parent's font-size: 0 */
+    font-size: 1rem; /* Reset font size after parent's font-size: 0 */
 }
 
 .date {
@@ -321,7 +323,7 @@ main {
 }
 
 .psychotherapie_section img {
-    height: 40vh;
+    height: 80vh;
     margin: 2rem 4rem 2rem 1rem;
     float: left; /* Float image to left */
     border-radius: 10px;
@@ -329,31 +331,26 @@ main {
 
 .psychotherapie_section h1 {
     color: #153763;
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.psychotherapie_section h3 {
-    color: #153763;
-    font-size: 1.7rem;
-    margin-top: 1rem;
-    margin-bottom: 0.7rem;
-}
-
 .psychotherapie_section h5 {
-    color: #326bb5;
-    font-size: 1.2rem;
+    color: gray;
+    font-size: 1rem;
     margin-top: 3rem;
+    margin-bottom: -3rem;
 }
 
 .psychotherapie_section p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     /* Text will automatically flow around the image */
 }
 
 .psychotherapie_section li {
     margin-left: 5vw;
+    font-size: 1rem;
 }
 
 /*psychotherapie end*/
@@ -374,7 +371,7 @@ main {
 }
 
 .kontakt_container p {
-    color: black;
+    color: gray;
 }
 
 .map_container {
@@ -394,7 +391,7 @@ main {
 }
 
 .kontakt_undertitle {
-    color: black;
+    color: gray;
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -411,7 +408,7 @@ main {
 
 .kontakt_container li {
     margin-left: 2vw;
-    color: black;
+    color: gray;
 }
 /*kontakt end*/
 
