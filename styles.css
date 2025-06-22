@@ -361,6 +361,99 @@ main {
 
 /*faq start*/
 
+.faq_section h1 {
+    margin-top: 3vh;
+    margin-bottom: 1rem;
+}
+
+.faq_section p {
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* FAQ Group */
+.faq-group {
+  margin-bottom: 40px;
+}
+
+.faq-group-title {
+  font-size: 1.5rem;
+  color: #326bb5; /* Matching your gradient's blue */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* FAQ Item */
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  background: #f9f9f9;
+  transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+  background: #f0f0f0;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #326bb5;
+  padding: 0 0 0 16px;
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.show {
+  max-height: 500px; /* Adjust based on content */
+  padding: 16px;
+}
+
+.faq-answer p {
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-question {
+  cursor: pointer; /* Already in your CSS, just double-check */
+  user-select: none; /* Prevent text selection when clicking rapidly */
+}
+
 /*faq end*/
 
 /*kontakt start*/
@@ -423,14 +516,22 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
-    height: 3em;
+    height: 6rem;
     background: linear-gradient(to right, #7aced8, #326bb5);
-    padding: 0 4rem;
+    mask: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,        /* Top: Fully transparent */
+        rgba(0, 0, 0, 1) 50%,       /* Midpoint (start of fade): Still transparent */
+        rgba(0, 0, 0, 0) 100%       /* Bottom: Fully opaque (visible) */
+  );
+    padding: 0 4rem 1.5rem 4rem;
     color: white;
     opacity: 0.9;
 }
+
+/*mask: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));*/
 
 .sticky-menu ul {
     display: flex;
