@@ -182,7 +182,7 @@ header a {
 /* ---------------------------- main start ----------------------------------------- */
 
 main {
-    padding: 3rem 4rem;
+    padding: 5rem 4rem;
 }
 
 .content-section {
@@ -323,10 +323,14 @@ main {
 }
 
 .psychotherapie_section img {
-    height: 80vh;
-    margin: 2rem 4rem 2rem 1rem;
+    width: 40vh;
+    margin: 2rem 0 2rem 1rem;
     float: left; /* Float image to left */
     border-radius: 10px;
+}
+
+.psych_text {
+    margin-left: 50vh;
 }
 
 .psychotherapie_section h1 {
@@ -357,11 +361,46 @@ main {
 
 /*training start*/
 
+.training_section {
+    /* Ensure the container properly contains floats */
+    overflow: auto;
+}
+
+.training_section img {
+    width: 40vh;
+    margin: 2rem 0 2rem 1rem;
+    float: left; /* Float image to left */
+    border-radius: 10px;
+}
+
+.training_text {
+    margin-left: 50vh;
+}
+
+.training_section h1 {
+    color: #153763;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.training_section p {
+    font-size: 1rem;
+    /* Text will automatically flow around the image */
+}
+
+.training_section li {
+    margin-left: 5vw;
+    font-size: 1rem;
+}
+
 /*training end*/
 
 /*faq start*/
 
 .faq_section h1 {
+    color: #153763;
+    font-size: 1.5rem;
     margin-top: 3vh;
     margin-bottom: 1rem;
 }
@@ -384,7 +423,7 @@ main {
 
 .faq-group-title {
   font-size: 1.5rem;
-  color: #326bb5; /* Matching your gradient's blue */
+  color: #153763; /* Matching your gradient's blue */
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
@@ -405,7 +444,7 @@ main {
   padding: 16px;
   cursor: pointer;
   background: #f9f9f9;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease; /*something is wrong here*/
 }
 
 .faq-question:hover {
@@ -416,7 +455,7 @@ main {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: gray;
 }
 
 .toggle-btn {
@@ -452,6 +491,11 @@ main {
 .faq-question {
   cursor: pointer; /* Already in your CSS, just double-check */
   user-select: none; /* Prevent text selection when clicking rapidly */
+}
+
+.faq_section a {
+    margin-left: 40vw;
+    margin-top: auto;
 }
 
 /*faq end*/
@@ -505,6 +549,12 @@ main {
 }
 /*kontakt end*/
 
+/*impressum start*/
+.impressum_tel i, .impressum_mail i, .impressum_website i {
+    margin-right: 0.5rem;
+}
+/*impressum end*/
+
 
 /* ----------------------------- main end ------------------------------------------ */
 
@@ -515,21 +565,17 @@ footer {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 6rem;
+    height: 3rem;
     background: linear-gradient(to right, #7aced8, #326bb5);
-    mask: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 1) 0%,        /* Top: Fully transparent */
-        rgba(0, 0, 0, 1) 50%,       /* Midpoint (start of fade): Still transparent */
-        rgba(0, 0, 0, 0) 100%       /* Bottom: Fully opaque (visible) */
-  );
-    padding: 0 4rem 1.5rem 4rem;
+    padding: auto;
     color: white;
     opacity: 0.9;
 }
+
+
 
 /*mask: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));*/
 
@@ -548,6 +594,10 @@ footer {
 .sticky-menu a {
     color: white;
     text-decoration: none;
+}
+
+.mail_address a, .ordination_address a {
+    color: white;
 }
 
 /* ---------------------------- footer end ----------------------------------------- */
