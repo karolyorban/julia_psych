@@ -182,7 +182,7 @@ header a {
 /* ---------------------------- main start ----------------------------------------- */
 
 main {
-    padding: 5rem 4rem;
+    padding: 5rem 20vw;
 }
 
 .content-section {
@@ -213,8 +213,20 @@ main {
 
 /*home start*/
 
-.home_section {
+.home_complete {
+    display: flex;
+    flex-direction: row;
     margin-top: 10vh;
+}
+
+.home_text {
+    flex: 1;
+}
+
+.home_img {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .home_title {
@@ -230,8 +242,7 @@ main {
 }
 
 .home_section img {
-    height: 60vh;
-    float: right;
+    height: 40vh;
     border-radius: 10px;
     margin-left: 4rem;
 }
@@ -246,12 +257,16 @@ main {
     font-size: 1rem;
     color: #153763;
     color: gray;
+    margin-top: 1rem;
+}
+
+.home_button_div {
+    text-align: center;
 }
 
 .home_button {
     display: inline-block;
     margin-top: 5rem; /* Space from last paragraph */
-    margin-left: 4rem;
     padding: 12px 25px;
     background-color: #153763; /* Matching your gradient */
     color: white;
@@ -273,15 +288,20 @@ main {
     padding-top: 5vh;
 }
 
+.about_me_top_part {
+    display: flex;
+    align-items: center;
+}
+
 .about_me_section img {
-    height: 80vh;
-    float: left;
+    height: 50vh;
     border-radius: 10px;
     margin: auto 2rem 1rem auto;
 }
 
 .beruf_ausbildung {
     display: flex;
+    margin-top: 3rem;
 }
 
 .about_me_section h1 {
@@ -296,17 +316,24 @@ main {
     font-size: 1rem; /* Reset font size after parent's font-size: 0 */
 }
 
+.about_me_descr {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
 .date {
     color: #326bb5;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
 }
 
 .beruf {
     margin-left: -17vw;
+    flex: 1;
 }
 
 .ausbildung {
     margin-left: -15vw;
+    flex: 1;
 }
 
 .about_me_intro {
@@ -322,15 +349,21 @@ main {
     overflow: auto;
 }
 
+.psych_overpart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4vw;
+}
+
 .psychotherapie_section img {
-    width: 40vh;
-    margin: 2rem 0 2rem 1rem;
-    float: left; /* Float image to left */
+    width: 18vw;
     border-radius: 10px;
 }
 
 .psych_text {
-    margin-left: 50vh;
+    width: 38vw;
+    text-align: justify;
 }
 
 .psychotherapie_section h1 {
@@ -349,12 +382,21 @@ main {
 
 .psychotherapie_section p {
     font-size: 1rem;
+    margin-bottom: 1rem;
     /* Text will automatically flow around the image */
 }
 
 .psychotherapie_section li {
     margin-left: 5vw;
     font-size: 1rem;
+}
+
+.psych_underpart {
+    margin-top: 5rem;
+}
+
+.psych_button {
+    text-align: center;
 }
 
 /*psychotherapie end*/
@@ -366,15 +408,15 @@ main {
     overflow: auto;
 }
 
-.training_section img {
-    width: 40vh;
-    margin: 2rem 0 2rem 1rem;
-    float: left; /* Float image to left */
-    border-radius: 10px;
+.training_overpart {
+    display: flex;
+    gap: 2vw;
 }
 
-.training_text {
-    margin-left: 50vh;
+.training_section img {
+    width: 35.3vh;
+    margin: 2rem 0 2rem 1rem;
+    border-radius: 10px;
 }
 
 .training_section h1 {
@@ -384,14 +426,25 @@ main {
     margin-bottom: 1rem;
 }
 
+.training_section h5 {
+    font-size: 1rem;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+}
+
 .training_section p {
     font-size: 1rem;
+    margin-bottom: 1rem;
     /* Text will automatically flow around the image */
 }
 
 .training_section li {
     margin-left: 5vw;
     font-size: 1rem;
+}
+
+.training_button {
+    text-align: center;
 }
 
 /*training end*/
@@ -493,9 +546,9 @@ main {
   user-select: none; /* Prevent text selection when clicking rapidly */
 }
 
-.faq_section a {
-    margin-left: 40vw;
-    margin-top: auto;
+.faq_button {
+    text-align: center;
+    margin-top: -6rem;
 }
 
 /*faq end*/
@@ -552,6 +605,21 @@ main {
 /*impressum start*/
 .impressum_tel i, .impressum_mail i, .impressum_website i {
     margin-right: 0.5rem;
+    color: gray;
+}
+
+.impressum_section h1 {
+    margin-bottom: 2rem auto;
+    color: #153763;
+    font-size: 1.5rem;
+}
+
+.impressum_section p {
+    margin-top: 1rem;
+}
+
+.impressum_section li {
+    margin-left: 3vw;
 }
 /*impressum end*/
 
@@ -589,6 +657,12 @@ footer {
 .sticky-menu li {
     display: inline-block;
     padding: 0 2vw;
+    align-self: center;
+    text-align: center;
+}
+
+.fas {
+    color: white;
 }
 
 .sticky-menu a {
@@ -596,8 +670,9 @@ footer {
     text-decoration: none;
 }
 
-.mail_address a, .ordination_address a {
+.mail_address a, .ordination_address a, .f_impressum a {
     color: white;
+    text-decoration: none;
 }
 
 /* ---------------------------- footer end ----------------------------------------- */
