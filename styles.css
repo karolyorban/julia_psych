@@ -290,13 +290,12 @@ main {
 
 .about_me_top_part {
     display: flex;
-    align-items: center;
 }
 
 .about_me_section img {
     height: 50vh;
     border-radius: 10px;
-    margin: auto 2rem 1rem auto;
+    margin: 5vh 2rem 1rem auto;
 }
 
 .beruf_ausbildung {
@@ -352,13 +351,14 @@ main {
 .psych_overpart {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 4vw;
 }
 
 .psychotherapie_section img {
     width: 18vw;
     border-radius: 10px;
+    margin-top: 5vh;
 }
 
 .psych_text {

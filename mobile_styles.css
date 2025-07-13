@@ -1,0 +1,483 @@
+@media (max-width: 768px) {
+
+    main {
+        padding-bottom: 8rem;
+    }
+
+    /*header start*/
+
+    header {
+        padding: 0.5rem 1rem; /* Reduced padding for mobile */
+    }
+
+    /* Hide the regular navigation on mobile */
+    .sticky-menu {
+        display: none;
+    }
+
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust header content layout */
+    .header-content {
+        justify-content: flex-end; /* Push hamburger to right */
+        padding: 0.5rem 0;
+    }
+
+    /* Make dropdown full width on mobile */
+    .dropdown-nav {
+        width: 40%;
+        left: auto;
+        right: 0;
+        border-radius: 0;
+    }
+
+    /* Larger tap targets for mobile */
+    .dropdown-nav li {
+        padding: 1rem;
+    }
+
+    /*header end*/
+
+    /*home start*/
+
+    .home_complete {
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+
+    .home_text {
+        order: 2; /* Makes text appear after image */
+        padding: 0 1rem; /* Adds some side padding */
+    }
+
+    .home_img {
+        order: 1; /* Makes image appear before text */
+        margin-bottom: 2rem;
+        justify-content: center; /* Centers the image */
+    }
+
+    .home_section img {
+        height: auto;
+        max-height: 40vh;
+        width: 80%;
+        margin-left: 0;
+        margin: 0 auto; /* Centers the image */
+    }
+
+    .home_name {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .home_section h1 {
+        font-size: 1.3rem;
+        margin: 1.5rem auto;
+    }
+
+    .home_description {
+        font-size: 0.9rem;
+    }
+
+    .home_button {
+        margin-top: 2rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /*home end*/
+
+    /*about_me start*/
+
+    .about_me_section {
+        padding-top: 3vh;
+    }
+
+    .about_me_top_part {
+        flex-direction: column-reverse;
+    }
+
+    .about_me_section img {
+        height: auto;
+        max-height: 40vh;
+        width: 80%;
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .about_me_intro {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+
+    .about_me_section h1 {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+
+    .about_me_descr {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .beruf_ausbildung {
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .beruf, .ausbildung {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+
+    .about_me_section p {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .date {
+        margin-top: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    /*about_me end*/
+
+    /*psych start*/
+
+    .psych_overpart {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .psychotherapie_section img {
+        width: 60%;
+        max-width: 250px;
+        margin: 2rem auto 0 auto; /* Center image with top margin */
+        display: block; /* Ensure proper centering */
+    }
+
+    .psych_text {
+        width: 100%;
+        padding: 0 1rem; /* Add side padding for better readability */
+    }
+
+    .psychotherapie_section h1 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        text-align: center; /* Center headings on mobile */
+    }
+
+    .psychotherapie_section p {
+        font-size: 0.9rem;
+        text-align: left; /* Keep text left-aligned for readability */
+    }
+
+    .psych_underpart {
+        margin-top: 3rem;
+        padding: 0 1rem; /* Add side padding */
+    }
+
+    .psychotherapie_section li {
+        margin-left: 1.5rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem; /* Add space between list items */
+    }
+
+    .psychotherapie_section h5 {
+        font-size: 0.9rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .psych_button {
+        margin-top: 1.5rem;
+    }
+
+    /*psych end*/
+
+    /*training start*/
+
+    .training_overpart {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .training_section img {
+        width: 60%;
+        max-width: 250px;
+        height: auto;
+        margin: 2rem auto; /* Center image */
+        display: block;
+    }
+
+    .training_text {
+        padding: 0 1rem; /* Add side padding */
+    }
+
+    .training_section h1 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .training_section p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .training_section li {
+        margin-left: 1.5rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .training_section h5 {
+        font-size: 0.9rem;
+        margin: 2rem 0 1rem 0;
+        text-align: center;
+    }
+
+    .training_button {
+        margin-top: 1.5rem;
+    }
+
+    /*training end*/
+
+    /*faq start*/
+
+    .faq_section h1 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: 2vh;
+    }
+
+    .faq_section p {
+        padding: 0 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-group {
+        margin-bottom: 30px;
+    }
+
+    .faq-group-title {
+        font-size: 1.2rem;
+        padding: 0 1rem 10px 1rem;
+        text-align: center;
+    }
+
+    .faq-item {
+        margin-bottom: 12px;
+    }
+
+    .faq-question {
+        padding: 12px;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+        padding-right: 10px;
+    }
+
+    .toggle-btn {
+        font-size: 1.2rem;
+        padding: 0 0 0 12px;
+    }
+
+    .faq-answer {
+        padding: 0 12px;
+    }
+
+    .faq-answer.show {
+        max-height: 2000px;
+        padding: 12px;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .faq_button {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*faq end*/
+
+    /*kontakt start*/
+
+    .kontakt_container {
+        flex-direction: column;
+        padding-top: 2vh;
+    }
+
+    .map_container {
+        width: 100%;
+        height: 50vh; /* Reduced height for mobile */
+        order: 1; /* Map first on mobile */
+    }
+
+    .kontakt_text {
+        width: 100%;
+        padding: 1.5rem;
+        order: 2; /* Text below map */
+    }
+
+    .kontakt_text h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .kontakt_undertitle {
+        font-size: 1rem;
+    }
+
+    .kontakt_info,
+    .kontakt_descr {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    .kontakt_container li {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .kontakt_descr {
+        margin-top: 1.5rem;
+    }
+
+    /*kontakt end*/
+
+    /*impressum start*/
+
+    .impressum_section {
+        padding: 1rem;
+    }
+
+    .impressum_section h1 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .impressum_section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0.8rem 0;
+    }
+
+    .impressum_tel,
+    .impressum_mail,
+    .impressum_website {
+        font-size: 0.9rem;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .impressum_tel i,
+    .impressum_mail i,
+    .impressum_website i {
+        margin-right: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .impressum_section a {
+        word-break: break-all; /* Prevent long URLs from overflowing */
+    }
+
+    .impressum_section li {
+        margin-left: 1.5rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .bold_text {
+        font-weight: bold;
+        margin-top: 1.5rem;
+        display: block;
+    }
+
+    /* Add extra spacing between sections */
+    .impressum_section > br {
+        display: block;
+        margin: 1.5rem 0;
+        content: "";
+    }
+
+    /*impressum end*/
+
+    /*footer start*/
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        min-height: 5rem;
+        background: linear-gradient(to right, #7aced8, #326bb5);
+        padding: 0.5rem 0;
+        color: white;
+        opacity: 0.9;
+        font-size: 0.8rem;
+    }
+
+    .copyright_text,
+    .telefon_number,
+    .mail_address,
+    .ordination_address,
+    .f_impressum {
+        margin: 0.3rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .fas {
+        margin-right: 0.5rem;
+    }
+
+    .mail_address a,
+    .ordination_address a,
+    .f_impressum a {
+        color: white;
+        text-decoration: none;
+        word-break: break-word;
+    }
+
+    /* Hide some elements on mobile if needed */
+    .copyright_text {
+        display: none; /* Optional: hide copyright on mobile */
+    }
+
+    /* Alternatively, show copyright but stack differently */
+    /*
+    footer {
+        flex-wrap: wrap;
+    }
+    .copyright_text {
+        width: 100%;
+        order: -1;
+        margin-bottom: 0.5rem;
+    }
+    */
+
+    /*footer end*/
+}
