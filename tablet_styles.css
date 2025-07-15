@@ -1,0 +1,162 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* General Layout Adjustments */
+    main {
+        padding: 5rem 8vw 6rem 8vw;
+    }
+
+    /* Header Adjustments */
+    header {
+        padding: 0.5rem 2rem;
+    }
+
+    .sticky-menu ul {
+        flex-wrap: wrap;
+    }
+
+    .sticky-menu li {
+        padding: 0 1vw;
+    }
+
+    /* Home Section */
+    .home_complete {
+        flex-direction: column;
+        margin-top: 8vh;
+    }
+
+    .home_img {
+        order: -1;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    .home_section img {
+        height: auto;
+        max-height: 50vh;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .home_name {
+        font-size: 2.5rem;
+    }
+
+    /* About Me Section */
+    .about_me_top_part {
+        flex-direction: column-reverse;
+    }
+
+    .about_me_section img {
+        width: 60%;
+        max-height: 50vh;
+        margin: 2rem auto;
+    }
+
+    .about_me_intro,
+    .beruf,
+    .ausbildung {
+        margin-left: 0;
+        padding: 0 2rem;
+    }
+
+    .beruf_ausbildung {
+        flex-direction: column;
+    }
+
+    /* Psychotherapy Section */
+    .psych_overpart {
+        flex-direction: column-reverse;
+    }
+
+    .psychotherapie_section img {
+        width: 50%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+    }
+
+    .psych_text {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    /* Training Section */
+    .training_overpart {
+        flex-direction: column;
+    }
+
+    .training_section img {
+        width: 50%;
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+        padding: 15px;
+    }
+
+    .faq-group-title {
+        font-size: 1.3rem;
+    }
+
+    /* Contact Section */
+    .kontakt_container {
+        flex-direction: column;
+    }
+
+    .map_container {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .kontakt_text {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.8rem 0;
+    }
+
+    .copyright_text {
+        display: block;
+        width: 100%;
+        order: -1;
+        margin-bottom: 0.5rem;
+    }
+
+    .telefon_number,
+    .mail_address,
+    .ordination_address,
+    .f_impressum {
+        width: 50%;
+        padding: 0.3rem 0;
+    }
+
+    /* Utility Adjustments */
+    h1 {
+        font-size: 1.4rem !important;
+    }
+
+    p, li {
+        font-size: 0.95rem !important;
+    }
+
+    /* Button Adjustments */
+    .home_button, 
+    .psych_button, 
+    .training_button, 
+    .faq_button a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Image Adjustments */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

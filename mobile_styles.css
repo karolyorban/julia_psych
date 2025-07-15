@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
 
     main {
-        padding-bottom: 8rem;
+        padding: 8rem 2vw !important;
     }
 
     /*header start*/
@@ -448,6 +448,7 @@
         margin: 0.3rem 0;
         text-align: center;
         width: 100%;
+        color: white;
     }
 
     .fas {
@@ -456,7 +457,8 @@
 
     .mail_address a,
     .ordination_address a,
-    .f_impressum a {
+    .f_impressum a,
+    .telefon_number a {
         color: white;
         text-decoration: none;
         word-break: break-word;
