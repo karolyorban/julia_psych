@@ -1,7 +1,11 @@
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    * {
+        color: red;
+    }
     /* General Layout Adjustments */
     main {
-        padding: 5rem 8vw 6rem 8vw;
+        padding: 5rem 8vw 10rem 8vw;
     }
 
     /* Header Adjustments */
@@ -31,7 +35,6 @@
 
     .home_section img {
         height: auto;
-        max-height: 50vh;
         width: 60%;
         margin: 0 auto;
     }
@@ -47,7 +50,6 @@
 
     .about_me_section img {
         width: 60%;
-        max-height: 50vh;
         margin: 2rem auto;
     }
 
@@ -158,5 +160,9 @@
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    .telefon_number a {
+        color: white;
     }
 }

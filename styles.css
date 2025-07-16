@@ -209,6 +209,8 @@ main {
 
 .bold_text {
     font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 /*home start*/
