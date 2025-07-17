@@ -292,10 +292,15 @@ main {
 
 .about_me_top_part {
     display: flex;
+    gap: 2rem;
 }
 
 .about_me_section img {
-    height: 50vh;
+    min-height: 50vh;  /* Changed from height to max-height */
+    max-width: 100%;   /* Prevents horizontal stretching */
+    width: auto;       /* Maintains aspect ratio */
+    height: auto;      /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures entire image is visible without distortion */
     border-radius: 10px;
     margin: 5vh 2rem 1rem auto;
 }

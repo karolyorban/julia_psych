@@ -118,6 +118,7 @@
 
     .about_me_descr {
         padding: 0 1rem;
+        text-align: justify;
         margin-bottom: 1rem;
         font-size: 0.9rem;
     }

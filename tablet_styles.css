@@ -1,11 +1,8 @@
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    * {
-        color: red;
-    }
     /* General Layout Adjustments */
     main {
-        padding: 5rem 8vw 10rem 8vw;
+        padding: 5rem 8vw 20rem 8vw;
     }
 
     /* Header Adjustments */
@@ -39,8 +36,12 @@
         margin: 0 auto;
     }
 
+    .home_title {
+        font-size: 3rem;
+    }
+
     .home_name {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     /* About Me Section */
@@ -70,14 +71,13 @@
     }
 
     .psychotherapie_section img {
-        width: 50%;
-        max-width: 300px;
+        width: 45%;
         margin: 2rem auto 0;
     }
 
     .psych_text {
         width: 100%;
-        padding: 0 2rem;
+        padding: 0;
     }
 
     /* Training Section */
