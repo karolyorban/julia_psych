@@ -37,11 +37,11 @@
     }
 
     .home_title {
-        font-size: 3rem;
+        font-size: 3rem !important;
     }
 
     .home_name {
-        font-size: 4rem;
+        font-size: 4rem !important;
     }
 
     /* About Me Section */
@@ -58,7 +58,15 @@
     .beruf,
     .ausbildung {
         margin-left: 0;
-        padding: 0 2rem;
+        padding: 0;
+    }
+
+    .about_me_section p {
+        margin-left: 0;
+    }
+
+    .about_me_section h1 {
+        margin-left: 0;
     }
 
     .beruf_ausbildung {
@@ -165,4 +173,14 @@
     .telefon_number a {
         color: white;
     }
+
+    /*extra for overwrite prevention*/
+    .home_title {
+        font-size: 1rem !important;
+    }
+
+    .home_name {
+        font-size: 3rem !important;
+    }
+    /*extra end*/
 }
